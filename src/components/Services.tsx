@@ -42,16 +42,16 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <div className="inline-block mb-4 px-4 py-2 bg-primary/10 rounded-full">
-            <p className="text-sm font-semibold text-primary">Our Services</p>
+    <section id="services" className="py-12 sm:py-20 bg-background">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <div className="inline-block mb-3 sm:mb-4 px-3 sm:px-4 py-1.5 sm:py-2 bg-primary/10 rounded-full">
+            <p className="text-xs sm:text-sm font-semibold text-primary">Our Services</p>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
             Comprehensive <span className="text-primary">Healthcare Services</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
             From routine checkups to specialized diabetology care, we provide comprehensive 
             medical services tailored to your health needs.
           </p>

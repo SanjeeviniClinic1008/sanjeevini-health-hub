@@ -35,22 +35,22 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-b from-accent to-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <div className="inline-block mb-4 px-4 py-2 bg-primary/10 rounded-full">
-            <p className="text-sm font-semibold text-primary">Get In Touch</p>
+    <section id="contact" className="py-12 sm:py-20 bg-gradient-to-b from-accent to-background">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <div className="inline-block mb-3 sm:mb-4 px-3 sm:px-4 py-1.5 sm:py-2 bg-primary/10 rounded-full">
+            <p className="text-xs sm:text-sm font-semibold text-primary">Get In Touch</p>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
             Contact <span className="text-primary">Sanjeevani Clinic</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
             Schedule your appointment or reach out to us with any questions. 
             We're here to help you achieve optimal health.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-12">
           {contactInfo.map((info, index) => (
             <Card 
               key={index} 
@@ -85,15 +85,15 @@ const Contact = () => {
         </div>
 
         {/* Emergency Notice */}
-        <Card className="p-6 bg-primary/5 border-primary/30">
+        <Card className="p-4 sm:p-6 bg-primary/5 border-primary/30">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="text-center md:text-left">
-              <h3 className="text-xl font-bold mb-2">Need Immediate Medical Attention?</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-lg sm:text-xl font-bold mb-2">Need Immediate Medical Attention?</h3>
+              <p className="text-sm sm:text-base text-muted-foreground">
                 For medical emergencies, please call our emergency line or visit the nearest hospital.
               </p>
             </div>
-            <Button variant="hero" size="lg">
+            <Button variant="hero" size="lg" className="w-full md:w-auto whitespace-nowrap">
               <Phone className="mr-2 h-5 w-5" />
               Emergency: +91 XXXXX XXXXX
             </Button>

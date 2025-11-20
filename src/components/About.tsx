@@ -27,9 +27,9 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gradient-to-b from-background to-accent">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+    <section id="about" className="py-12 sm:py-20 bg-gradient-to-b from-background to-accent">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="grid md:grid-cols-2 gap-8 sm:gap-12 items-center">
           {/* Doctor Image */}
           <div className="relative">
             <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-primary-glow/20 rounded-3xl blur-2xl" />
@@ -42,20 +42,20 @@ const About = () => {
 
           {/* Content */}
           <div>
-            <div className="inline-block mb-4 px-4 py-2 bg-primary/10 rounded-full">
-              <p className="text-sm font-semibold text-primary">Meet Your Doctor</p>
+            <div className="inline-block mb-3 sm:mb-4 px-3 sm:px-4 py-1.5 sm:py-2 bg-primary/10 rounded-full">
+              <p className="text-xs sm:text-sm font-semibold text-primary">Meet Your Doctor</p>
             </div>
             
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
               Dedicated to Your <span className="text-primary">Health & Wellbeing</span>
             </h2>
             
-            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+            <p className="text-base sm:text-lg text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
               With over 23 years of distinguished experience in general practice, diabetology, 
               and critical care, I bring comprehensive medical expertise to Sanjeevani Clinic.
             </p>
             
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8 leading-relaxed">
               My extensive background includes working with leading private hospital organizations, 
               specializing in intensive care and managing complex medical conditions. At Sanjeevani 
               Clinic, every patient receives personalized, compassionate care backed by decades of 
