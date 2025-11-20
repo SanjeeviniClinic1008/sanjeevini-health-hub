@@ -248,16 +248,16 @@ const DietCharts = () => {
       <Navbar />
       
       {/* Header */}
-      <section className="py-20 bg-gradient-to-b from-accent to-background">
-        <div className="container mx-auto px-4">
+      <section className="py-12 sm:py-20 bg-gradient-to-b from-accent to-background">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center max-w-3xl mx-auto">
-            <div className="inline-block mb-4 px-4 py-2 bg-primary/10 rounded-full">
-              <p className="text-sm font-semibold text-primary">Nutrition Guidance</p>
+            <div className="inline-block mb-3 sm:mb-4 px-3 sm:px-4 py-1.5 sm:py-2 bg-primary/10 rounded-full">
+              <p className="text-xs sm:text-sm font-semibold text-primary">Nutrition Guidance</p>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 sm:mb-6">
               Diet <span className="text-primary">Charts & Plans</span>
             </h1>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-base sm:text-lg text-muted-foreground px-4">
               Comprehensive nutritional guidance for diabetes, hypertension, and general wellness. 
               These diet plans are designed to help you maintain optimal health.
             </p>
@@ -266,8 +266,8 @@ const DietCharts = () => {
       </section>
 
       {/* Diet Charts */}
-      <section className="py-12 container mx-auto px-4">
-        <Card className="p-6 mb-8 bg-primary/5 border-primary/20">
+      <section className="py-8 sm:py-12 container mx-auto px-4 sm:px-6">
+        <Card className="p-4 sm:p-6 mb-6 sm:mb-8 bg-primary/5 border-primary/20">
           <div className="flex items-start gap-3">
             <AlertCircle className="h-5 w-5 text-primary mt-0.5" />
             <div>
@@ -282,25 +282,25 @@ const DietCharts = () => {
         </Card>
 
         <Tabs defaultValue="diabetes" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 mb-8">
-            <TabsTrigger value="diabetes" className="flex items-center gap-2">
-              <Droplet className="h-4 w-4" />
-              <span className="hidden sm:inline">Diabetes</span>
+          <TabsList className="grid w-full grid-cols-3 mb-6 sm:mb-8 h-auto">
+            <TabsTrigger value="diabetes" className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm py-2 sm:py-2.5">
+              <Droplet className="h-3 w-3 sm:h-4 sm:w-4" />
+              <span>Diabetes</span>
             </TabsTrigger>
-            <TabsTrigger value="hypertension" className="flex items-center gap-2">
-              <Heart className="h-4 w-4" />
-              <span className="hidden sm:inline">Hypertension</span>
+            <TabsTrigger value="hypertension" className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm py-2 sm:py-2.5">
+              <Heart className="h-3 w-3 sm:h-4 sm:w-4" />
+              <span>BP/Hypertension</span>
             </TabsTrigger>
-            <TabsTrigger value="general" className="flex items-center gap-2">
-              <Salad className="h-4 w-4" />
-              <span className="hidden sm:inline">General Health</span>
+            <TabsTrigger value="general" className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm py-2 sm:py-2.5">
+              <Salad className="h-3 w-3 sm:h-4 sm:w-4" />
+              <span>General</span>
             </TabsTrigger>
           </TabsList>
 
           <TabsContent value="diabetes">
-            <div className="mb-6">
-              <h2 className="text-3xl font-bold mb-3">Diabetes Management Diet</h2>
-              <p className="text-muted-foreground">
+            <div className="mb-4 sm:mb-6">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-2 sm:mb-3">Diabetes Management Diet</h2>
+              <p className="text-sm sm:text-base text-muted-foreground">
                 A balanced diet plan to help control blood sugar levels and manage diabetes effectively.
               </p>
             </div>
@@ -308,9 +308,9 @@ const DietCharts = () => {
           </TabsContent>
 
           <TabsContent value="hypertension">
-            <div className="mb-6">
-              <h2 className="text-3xl font-bold mb-3">Hypertension (High BP) Diet</h2>
-              <p className="text-muted-foreground">
+            <div className="mb-4 sm:mb-6">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-2 sm:mb-3">Hypertension (High BP) Diet</h2>
+              <p className="text-sm sm:text-base text-muted-foreground">
                 DASH diet principles to help lower blood pressure and maintain cardiovascular health.
               </p>
             </div>
@@ -318,9 +318,9 @@ const DietCharts = () => {
           </TabsContent>
 
           <TabsContent value="general">
-            <div className="mb-6">
-              <h2 className="text-3xl font-bold mb-3">General Wellness Diet</h2>
-              <p className="text-muted-foreground">
+            <div className="mb-4 sm:mb-6">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-2 sm:mb-3">General Wellness Diet</h2>
+              <p className="text-sm sm:text-base text-muted-foreground">
                 A well-rounded nutrition plan for overall health and disease prevention.
               </p>
             </div>

@@ -117,5 +117,16 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Improve touch targets on mobile */
+  @media (max-width: 768px) {
+    button, a {
+      min-height: 44px;
+      min-width: 44px;
+    }
   }
 }
