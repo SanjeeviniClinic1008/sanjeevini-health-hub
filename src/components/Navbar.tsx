@@ -12,7 +12,9 @@ const Navbar = () => {
     if (location.pathname !== "/") {
       window.location.href = `/#${sectionId}`;
     } else {
-      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+      document
+        .getElementById(sectionId)
+        ?.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -34,40 +36,52 @@ const Navbar = () => {
               <Heart className="h-6 w-6 text-primary" />
             </div>
             <div>
-              <span className="font-bold text-xl text-foreground">Sanjeevani</span>
-              <span className="text-xs text-muted-foreground block -mt-1">Clinic</span>
+              <span className="font-bold text-xl text-foreground">
+                Sanjeevani
+              </span>
+              <span className="text-xs text-muted-foreground block -mt-1">
+                Clinic
+              </span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
+
           <div className="hidden md:flex items-center gap-1">
-            {navLinks.map((link) => (
-              <Button
-                key={link.label}
-                variant="ghost"
-                asChild={!link.section}
-                onClick={link.section ? () => scrollToSection(link.section) : undefined}
-                className={`${
-                  link.path === location.pathname && !link.section
-                    ? "bg-accent text-primary"
-                    : ""
-                }`}
-              >
-                {link.section ? (
-                  <button>{link.label}</button>
-                ) : (
+            {navLinks.map((link) => {
+              const isActive = link.path === location.pathname && !link.section;
+
+              // Section links: scroll within page (no Link component)
+              if (link.section) {
+                return (
+                  <Button
+                    key={link.label}
+                    variant="ghost"
+                    onClick={() => scrollToSection(link.section!)}
+                    className={isActive ? "bg-accent text-primary" : ""}
+                  >
+                    {link.label}
+                  </Button>
+                );
+              }
+
+              // Normal route links
+              return (
+                <Button
+                  key={link.label}
+                  variant="ghost"
+                  asChild
+                  className={isActive ? "bg-accent text-primary" : ""}
+                >
                   <Link to={link.path}>{link.label}</Link>
-                )}
-              </Button>
-            ))}
+                </Button>
+              );
+            })}
           </div>
 
           {/* CTA Button */}
           <div className="hidden md:flex">
-            <Button 
-              variant="hero" 
-              onClick={() => scrollToSection("contact")}
-            >
+            <Button variant="hero" onClick={() => scrollToSection("contact")}>
               <Phone className="mr-2 h-4 w-4" />
               Book Appointment
             </Button>
@@ -80,7 +94,11 @@ const Navbar = () => {
             className="md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
           </Button>
         </div>
 
@@ -88,27 +106,42 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-border">
             <div className="flex flex-col gap-2">
-              {navLinks.map((link) => (
-                <Button
-                  key={link.label}
-                  variant="ghost"
-                  asChild={!link.section}
-                  onClick={link.section ? () => scrollToSection(link.section) : () => setIsMenuOpen(false)}
-                  className={`justify-start ${
-                    link.path === location.pathname && !link.section
-                      ? "bg-accent text-primary"
-                      : ""
-                  }`}
-                >
-                  {link.section ? (
-                    <button>{link.label}</button>
-                  ) : (
+              {navLinks.map((link) => {
+                const isActive =
+                  link.path === location.pathname && !link.section;
+
+                if (link.section) {
+                  return (
+                    <Button
+                      key={link.label}
+                      variant="ghost"
+                      className={`justify-start ${
+                        isActive ? "bg-accent text-primary" : ""
+                      }`}
+                      onClick={() => scrollToSection(link.section!)}
+                    >
+                      {link.label}
+                    </Button>
+                  );
+                }
+
+                return (
+                  <Button
+                    key={link.label}
+                    variant="ghost"
+                    asChild
+                    className={`justify-start ${
+                      isActive ? "bg-accent text-primary" : ""
+                    }`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
                     <Link to={link.path}>{link.label}</Link>
-                  )}
-                </Button>
-              ))}
-              <Button 
-                variant="hero" 
+                  </Button>
+                );
+              })}
+
+              <Button
+                variant="hero"
                 className="mt-2"
                 onClick={() => scrollToSection("contact")}
               >
