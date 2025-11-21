@@ -37,7 +37,7 @@ const Navbar = () => {
             </div>
             <div>
               <span className="font-bold text-xl text-foreground">
-                Sanjeevani
+                Sanjeevini
               </span>
               <span className="text-xs text-muted-foreground block -mt-1">
                 Clinic

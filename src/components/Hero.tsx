@@ -9,7 +9,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
-          alt="Sanjeevani Clinic Interior"
+          alt="Sanjeevini Clinic Interior"
           className="w-full h-full object-cover opacity-20"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/80" />
@@ -27,7 +27,7 @@ const Hero = () => {
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6 leading-tight">
             <span className="text-foreground">Welcome to</span>
             <br />
-            <span className="text-primary">Sanjeevani Clinic</span>
+            <span className="text-primary">Sanjeevini Clinic</span>
           </h1>
           
           <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-6 sm:mb-8 leading-relaxed">

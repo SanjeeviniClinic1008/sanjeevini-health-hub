@@ -6,7 +6,7 @@ import React from "react";
 import ScrolltoTop from "./components/ScrolltoTop.tsx";
 
 const rawBase = import.meta.env.BASE_URL || "/";
-const basename = rawBase.replace(/\/$/, ""); // "/sanjeevani-health-hub" or ""
+const basename = rawBase.replace(/\/$/, ""); // "/sanjeevini-health-hub" or ""
 
 createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

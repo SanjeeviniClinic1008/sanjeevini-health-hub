@@ -7,16 +7,16 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: "+91 XXXXX XXXXX",
+      details: "+91 7396974529",
       action: "Call Now",
-      href: "tel:+91XXXXXXXXXX",
+      href: "tel:+91 7396974529",
     },
     {
       icon: Mail,
       title: "Email",
-      details: "contact@sanjeevaniclinic.com",
+      details: "sanjeeviniclinic009@gmail.com",
       action: "Send Email",
-      href: "mailto:contact@sanjeevaniclinic.com",
+      href: "mailto:sanjeeviniclinic@gmail.com",
     },
     {
       icon: Clock,
@@ -28,7 +28,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Address",
-      details: "Sanjeevani Clinic\nYour City, Your State - 000000",
+      details: "Sanjeevini Clinic\nHyderabad, Telangana - 500027",
       action: "Get Directions",
       href: "#location",
     },
@@ -42,7 +42,7 @@ const Contact = () => {
             <p className="text-xs sm:text-sm font-semibold text-primary">Get In Touch</p>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
-            Contact <span className="text-primary">Sanjeevani Clinic</span>
+            Contact <span className="text-primary">Sanjeevini Clinic</span>
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
             Schedule your appointment or reach out to us with any questions. 

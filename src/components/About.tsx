@@ -52,12 +52,12 @@ const About = () => {
             
             <p className="text-base sm:text-lg text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
               With over 23 years of distinguished experience in general practice, diabetology, 
-              and critical care, I bring comprehensive medical expertise to Sanjeevani Clinic.
+              and critical care, I bring comprehensive medical expertise to Sanjeevini Clinic.
             </p>
             
             <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8 leading-relaxed">
               My extensive background includes working with leading private hospital organizations, 
-              specializing in intensive care and managing complex medical conditions. At Sanjeevani 
+              specializing in intensive care and managing complex medical conditions. At Sanjeevini 
               Clinic, every patient receives personalized, compassionate care backed by decades of 
               medical excellence.
             </p>

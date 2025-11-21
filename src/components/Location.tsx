@@ -4,7 +4,7 @@ import { MapPin, Navigation } from "lucide-react";
 
 const Location = () => {
   // Replace with actual Google Maps coordinates
-  const googleMapsUrl = "https://www.google.com/maps/search/Sanjeevani+Clinic";
+  const googleMapsUrl = "https://www.google.com/maps/search/Sanjeevini+Clinic";
 
   return (
     <section id="location" className="py-12 sm:py-20 bg-background">
@@ -32,7 +32,7 @@ const Location = () => {
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
-                title="Sanjeevani Clinic Location"
+                title="Sanjeevini Clinic Location"
                 className="absolute inset-0"
               />
             </div>
@@ -56,7 +56,7 @@ const Location = () => {
               </div>
               <h3 className="text-xl font-bold mb-4">Clinic Address</h3>
               <address className="not-italic text-muted-foreground space-y-2">
-                <p className="font-semibold text-foreground">Sanjeevani Clinic</p>
+                <p className="font-semibold text-foreground">Sanjeevini Clinic</p>
                 <p>Building/Street Name</p>
                 <p>Area, Locality</p>
                 <p>City, State - 000000</p>

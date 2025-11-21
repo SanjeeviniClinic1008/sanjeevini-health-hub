@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-6 sm:gap-8 mb-6 sm:mb-8">
           {/* Clinic Info */}
           <div>
-            <h3 className="text-2xl font-bold mb-4 text-primary">Sanjeevani Clinic</h3>
+            <h3 className="text-2xl font-bold mb-4 text-primary">Sanjeevini Clinic</h3>
             <p className="text-sm opacity-90 mb-4">
               Providing compassionate healthcare with over 23 years of medical excellence 
               in general practice, diabetology, and critical care.
@@ -95,7 +95,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-secondary-foreground/20">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm opacity-90">
-            <p>© {new Date().getFullYear()} Sanjeevani Clinic. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} Sanjeevini Clinic. All rights reserved.</p>
             <p className="text-xs">
               Built with care for better healthcare
             </p>
