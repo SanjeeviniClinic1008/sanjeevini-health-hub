@@ -20,7 +20,7 @@ const Hero = () => {
         <div className="max-w-3xl">
           <div className="inline-block mb-4 sm:mb-6 px-3 sm:px-4 py-2 sm:py-4 bg-accent rounded-full">
             <p className="text-xs sm:text-sm font-semibold text-primary">
-              Trusted Healthcare Since 2000
+              Trusted Healthcare Provider Since 2000
             </p>
           </div>
           
@@ -63,12 +63,12 @@ const Hero = () => {
               <div className="text-xs sm:text-sm text-muted-foreground">Years Experience</div>
             </div>
             <div>
-              <div className="text-3xl sm:text-4xl font-bold text-primary mb-1 sm:mb-2">10k+</div>
+              <div className="text-3xl sm:text-4xl font-bold text-primary mb-1 sm:mb-2">2k+</div>
               <div className="text-xs sm:text-sm text-muted-foreground">Happy Patients</div>
             </div>
             <div>
-              <div className="text-3xl sm:text-4xl font-bold text-primary mb-1 sm:mb-2">24/7</div>
-              <div className="text-xs sm:text-sm text-muted-foreground">Available</div>
+              <div className="text-3xl sm:text-4xl font-bold text-primary mb-1 sm:mb-2">Transparent & Accurate</div>
+              <div className="text-xs sm:text-sm text-muted-foreground">Diagnosis</div>
             </div>
           </div>
         </div>

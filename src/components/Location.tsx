@@ -4,7 +4,7 @@ import { MapPin, Navigation } from "lucide-react";
 
 const Location = () => {
   // Replace with actual Google Maps coordinates
-  const googleMapsUrl = "https://www.google.com/maps/search/Sanjeevini+Clinic";
+  const googleMapsUrl = "https://www.google.com/maps/dir/17.3904718,78.4908346/Sanjeevini+Clinic+Dr+Gururaj+Kulkarni,+4-376%2F26%2F3,+3,+Sai+Nanditha+Enclave,+Chappal+Bazar,+Kachiguda,+Hyderabad,+Telangana+500027/@17.388729,78.4891675,17z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3bcb9900204fd2f7:0x4eff31220ac15477!2m2!1d78.4921673!2d17.3869174?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3D";
 
   return (
     <section id="location" className="py-12 sm:py-20 bg-background">
@@ -26,7 +26,8 @@ const Location = () => {
           <Card className="lg:col-span-2 p-0 overflow-hidden border-primary/20">
             <div className="aspect-video w-full bg-muted relative">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345093716!2d-122.41941708468143!3d37.77492977975903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c6c8f4459%3A0xb10ed6d9b5050fa5!2sTwitter%20HQ!5e0!3m2!1sen!2sus!4v1629794729807!5m2!1sen!2sus"
+  src="https://www.google.com/maps?q=17.3869174,78.4921673&z=17&output=embed"
+
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -35,6 +36,8 @@ const Location = () => {
                 title="Sanjeevini Clinic Location"
                 className="absolute inset-0"
               />
+              
+
             </div>
             <div className="p-6 bg-card">
               <Button 
@@ -57,9 +60,9 @@ const Location = () => {
               <h3 className="text-xl font-bold mb-4">Clinic Address</h3>
               <address className="not-italic text-muted-foreground space-y-2">
                 <p className="font-semibold text-foreground">Sanjeevini Clinic</p>
-                <p>Building/Street Name</p>
-                <p>Area, Locality</p>
-                <p>City, State - 000000</p>
+                <p>4-376/26/3, 3</p>
+                <p>Chappal Bazaar Road, Kachiguda</p>
+                <p>Hyderabad, Telangana - 500027</p>
                 <p className="pt-2">India</p>
               </address>
             </Card>
@@ -67,7 +70,7 @@ const Location = () => {
             <Card className="p-6 bg-primary/5 border-primary/30">
               <h3 className="font-semibold mb-3">Parking Available</h3>
               <p className="text-sm text-muted-foreground mb-3">
-                Ample parking space available for patients. Wheelchair accessible entrance.
+                Space Available on street and nearby area.
               </p>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <div className="h-2 w-2 rounded-full bg-primary" />
@@ -75,7 +78,7 @@ const Location = () => {
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground mt-2">
                 <div className="h-2 w-2 rounded-full bg-primary" />
-                <span>Easy public transport access</span>
+                <span>Pharmacy Available</span>
               </div>
             </Card>
           </div>
