@@ -4,21 +4,21 @@ import heroImage from "@/assets/clinic-hero.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+    <section className="relative min-h-[90vh] flex items-start overflow-hidden">
       {/* Background Image */}
-      <div className="absolute inset-0 z-0">
+      {/* <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
           alt="Sanjeevini Clinic Interior"
           className="w-full h-full object-cover opacity-20"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/80" />
-      </div>
+      </div> */}
 
       {/* Content */}
-      <div className="container relative z-10 mx-auto px-4 sm:px-6 py-12 sm:py-20">
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 py-2 sm:py-6">
         <div className="max-w-3xl">
-          <div className="inline-block mb-4 sm:mb-6 px-3 sm:px-4 py-1.5 sm:py-2 bg-accent rounded-full">
+          <div className="inline-block mb-4 sm:mb-6 px-3 sm:px-4 py-2 sm:py-4 bg-accent rounded-full">
             <p className="text-xs sm:text-sm font-semibold text-primary">
               Trusted Healthcare Since 2000
             </p>
