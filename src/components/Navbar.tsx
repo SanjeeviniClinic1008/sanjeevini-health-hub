@@ -7,16 +7,37 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
-  const scrollToSection = (sectionId: string) => {
-    setIsMenuOpen(false);
-    if (location.pathname !== "/") {
-      window.location.href = `/#${sectionId}`;
-    } else {
-      document
-        .getElementById(sectionId)
-        ?.scrollIntoView({ behavior: "smooth" });
+  // inside Navbar component (replace your existing scrollToSection)
+// replace your scrollToSection with this
+const scrollToSection = (sectionId: string) => {
+  setIsMenuOpen(false);
+
+  const base = import.meta.env.BASE_URL || "/";
+  const normalizedBase = base.replace(/\/$/, "");
+  const currentPath = location.pathname.replace(/\/$/, "");
+  const isHome =
+    (normalizedBase === "" && (currentPath === "" || currentPath === "/")) ||
+    currentPath === normalizedBase;
+
+  const cleanId = sectionId.replace(/^#/, "");
+
+  if (isHome) {
+    // Try to scroll immediately if element exists
+    const el = document.getElementById(cleanId);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      return;
     }
-  };
+    // If element not present, navigate to base#id — the Home component will smooth-scroll after load
+    window.location.href = `${base}#${cleanId}`;
+    return;
+  }
+
+  // Not on homepage -> navigate to home + hash (home will handle smooth scroll)
+  window.location.href = `${base}#${cleanId}`;
+};
+
+
 
   const navLinks = [
     { label: "Home", path: "/", section: null },
@@ -81,7 +102,7 @@ const Navbar = () => {
 
           {/* CTA Button */}
           <div className="hidden md:flex">
-            <Button variant="hero" onClick={() => scrollToSection("#contact")}>
+            <Button variant="hero" onClick={() => scrollToSection("contact")}>
               <Phone className="mr-2 h-4 w-4" />
               Book Appointment
             </Button>
