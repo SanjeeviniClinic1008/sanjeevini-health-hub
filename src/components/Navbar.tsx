@@ -81,7 +81,7 @@ const Navbar = () => {
 
           {/* CTA Button */}
           <div className="hidden md:flex">
-            <Button variant="hero" onClick={() => scrollToSection("contact")}>
+            <Button variant="hero" onClick={() => scrollToSection("#contact")}>
               <Phone className="mr-2 h-4 w-4" />
               Book Appointment
             </Button>
