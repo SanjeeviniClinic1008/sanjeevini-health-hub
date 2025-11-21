@@ -8,20 +8,15 @@ const Navbar = () => {
   const location = useLocation();
 
   const scrollToSection = (sectionId: string) => {
-  setIsMenuOpen(false);
-
-  const base = import.meta.env.BASE_URL || "/"; // "/sanjeevani-health-hub/" or "/"
-  // If we're not on the homepage (relative to basename), go to the home URL with the hash:
-  const homePath = base; // ex: "/sanjeevani-health-hub/"
-  // Use absolute href so browser requests correct path on GH Pages
-  if (!location.pathname.endsWith(homePath.replace(/\/$/, "")) && location.pathname !== homePath) {
-    // navigate to site root + hash
-    window.location.href = `${homePath}#${sectionId}`;
-  } else {
-    // we're on home — smooth scroll to element
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
-  }
-};
+    setIsMenuOpen(false);
+    if (location.pathname !== "/") {
+      window.location.href = `/#${sectionId}`;
+    } else {
+      document
+        .getElementById(sectionId)
+        ?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   const navLinks = [
     { label: "Home", path: "/", section: null },
